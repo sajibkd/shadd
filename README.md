@@ -1,16 +1,10 @@
 # shadd ⊕
 
+![npm version](https://img.shields.io/npm/v/shadd?color=informational) <!-- ![npm downloads](https://img.shields.io/npm/dm/shadd) --> ![license](https://img.shields.io/badge/license-MIT-green)
+
 Global shorthand for `shadcn add` with automatic package manager detection.
 
 `shadd` forwards all flags and arguments directly to `shadcn@latest add`, while detecting your package manager (npm, pnpm, yarn, bun, or deno) so you don't have to remember which runner to use. Detection is powered by `package-manager-detector`.
-
-![npm version](https://img.shields.io/npm/v/shadd?color=informational) <!-- ![npm downloads](https://img.shields.io/npm/dm/shadd) --> ![license](https://img.shields.io/badge/license-MIT-green)
-
-## Why?
-
-- **One command, any package manager**: Auto-detects npm, pnpm, yarn, bun, or deno and runs the correct `shadcn add` variant for you.
-- **No new flags to learn**: Everything after `shadd` is passed straight through to `shadcn add`.
-- **Monorepo-friendly**: Uses `package-manager-detector` to crawl upwards and detect the right tool for the nearest repository root.
 
 ```diff
 Before
@@ -23,6 +17,12 @@ Before
 After
 + shadd
 ```
+
+## Why?
+
+- **One command, any package manager**: Auto-detects npm, pnpm, yarn, bun, or deno and runs the correct `shadcn add` variant for you.
+- **No new flags to learn**: Everything after `shadd` is passed straight through to `shadcn add`.
+- **Monorepo-friendly**: Uses `package-manager-detector` to crawl upwards and detect the right tool for the nearest repository root.
 
 ## Install (global)
 
@@ -50,7 +50,7 @@ shadd button
 # Add multiple components
 shadd button card dialog
 
-# Pass-through flags (examples)
+# Pass-through flags (examples; all flags pass through to shadcn add)
 shadd -y --overwrite button
 
 # Using registries (names, URLs, or local paths are supported by shadcn)
@@ -58,7 +58,7 @@ shadd @8bitcn/accordion
 shadd https://example.com/registry/components/button.json
 ```
 
-Under the hood, `shadd` maps to the right runner automatically:
+Under the hood, `shadd` maps to the correct package manager command automatically:
 
 - pnpm: `pnpm dlx shadcn@latest add ...`
 - npm: `npx shadcn@latest add ...`
@@ -70,7 +70,7 @@ Under the hood, `shadd` maps to the right runner automatically:
 
 - Must be run inside an active git repository; otherwise, `shadd` will exit with an error.
 - If a supported package manager cannot be detected, `shadd` will exit with an error.
-- Package manager detection is provided by `package-manager-detector` ([repo](https://github.com/antfu-collective/package-manager-detector), [README](https://raw.githubusercontent.com/antfu-collective/package-manager-detector/refs/heads/main/README.md)).
+- Package manager detection is provided by [`package-manager-detector`](https://github.com/antfu-collective/package-manager-detector).
 
 ## License
 
