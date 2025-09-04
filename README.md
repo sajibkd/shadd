@@ -1,10 +1,28 @@
-# shadd
+# shadd ⊕
 
 Global shorthand for `shadcn add` with automatic package manager detection.
 
 `shadd` forwards all flags and arguments directly to `shadcn@latest add`, while detecting your package manager (npm, pnpm, yarn, bun, or deno) so you don't have to remember which runner to use. Detection is powered by `package-manager-detector`.
 
-Requires running inside a git repository with shadcn initialized first. See the shadcn init docs: [`ui.shadcn.com/docs/cli#init`](https://ui.shadcn.com/docs/cli#init).
+![npm version](https://img.shields.io/npm/v/shadd?color=informational) <!-- ![npm downloads](https://img.shields.io/npm/dm/shadd) --> ![license](https://img.shields.io/badge/license-MIT-green)
+
+## Why?
+
+- **One command, any package manager**: Auto-detects npm, pnpm, yarn, bun, or deno and runs the correct `shadcn add` variant for you.
+- **No new flags to learn**: Everything after `shadd` is passed straight through to `shadcn add`.
+- **Monorepo-friendly**: Uses `package-manager-detector` to crawl upwards and detect the right tool for the nearest repository root.
+
+```diff
+Before
+- pnpm dlx shadcn@latest add
+- npx shadcn@latest add
+- yarn shadcn@latest add
+- bunx --bun shadcn@latest add
+- deno run -A npm:shadcn@latest add
+
+After
++ shadd
+```
 
 ## Install (global)
 
