@@ -4,7 +4,7 @@ import path from "node:path";
 import { spawn } from "node:child_process";
 import { detect } from "package-manager-detector/detect";
 
-type SupportedPackageManager = "pnpm" | "npm" | "yarn" | "bun";
+type SupportedPackageManager = "pnpm" | "npm" | "yarn" | "bun" | "deno";
 
 function isGitRepo(directory: string): boolean {
   // Walk up until filesystem root or no .git and no enclosing repo
@@ -48,6 +48,11 @@ async function runShadcnAdd(manager: SupportedPackageManager, forwardedArgs: rea
       command = "bunx";
       args = ["--bun", "shadcn@latest", "add", ...forwardedArgs];
       break;
+    case "deno":
+      command = "deno";
+      // Use npm specifier to execute the shadcn CLI from npm registry
+      args = ["run", "-A", "npm:shadcn@latest", "add", ...forwardedArgs];
+      break;
     default:
       // Should be unreachable due to type
       throw new Error("Unsupported package manager");
@@ -81,7 +86,7 @@ async function main(): Promise<void> {
 
   const detected = await detect();
   const manager = detected?.agent as SupportedPackageManager | undefined;
-  if (!manager || !["pnpm", "npm", "yarn", "bun"].includes(manager)) {
+  if (!manager || !["pnpm", "npm", "yarn", "bun", "deno"].includes(manager)) {
     console.error(
       "Error: No package manager detected. Ensure your project is initialized and a supported package manager is used."
     );
