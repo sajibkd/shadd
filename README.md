@@ -27,13 +27,13 @@ After
 ## Install (global)
 
 ```bash
-npm i -g shadd
+npm i -g shadd@latest
 # or
-pnpm add -g shadd
+pnpm add -g shadd@latest
 # or
-yarn global add shadd
+yarn global add shadd@latest
 # or
-bun add -g shadd
+bun add -g shadd@latest
 ```
 
 ## Usage
