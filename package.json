@@ -1,0 +1,69 @@
+{
+  "name": "shadd",
+  "version": "1.0.2",
+  "description": "Installable global alias/shorthand of `npx shadcn add` that works with all package managers via auto-detection",
+  "type": "module",
+  "author": "Brandon McConnell",
+  "license": "ISC",
+  "homepage": "https://github.com/brandonmcconnell/shadd#readme",
+  "bugs": {
+    "url": "https://github.com/brandonmcconnell/shadd/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonmcconnell/shadd.git"
+  },
+  "keywords": [
+    "components",
+    "shadcn",
+    "registry",
+    "vercel",
+    "react",
+    "nextjs",
+    "next",
+    "reactjs",
+    "shadcn-ui",
+    "shadcnui",
+    "radix",
+    "radix-ui"
+  ],
+  "bin": {
+    "shadd": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepare": "tsup",
+    "test": "node -e \"console.log('no tests')\""
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2"
+  },
+  "tsup": {
+    "entry": ["src/index.ts"],
+    "format": ["esm"],
+    "platform": "node",
+    "target": "node18",
+    "outDir": "dist",
+    "clean": true,
+    "sourcemap": false,
+    "minify": false,
+    "shims": false,
+    "splitting": false,
+    "banner": {
+      "js": "#!/usr/bin/env node"
+    }
+  }
+}
