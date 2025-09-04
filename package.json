@@ -1,6 +1,6 @@
 {
   "name": "shadd",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Installable global alias/shorthand of `npx shadcn add` that works with all package managers via auto-detection",
   "type": "module",
   "author": "Brandon McConnell",
